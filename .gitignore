@@ -1,0 +1,24 @@
+# Virtual environment
+falconeye_env/
+
+# Model weights (too large for GitHub)
+*.pt
+*.pth
+
+# Dataset images (too large for GitHub)
+data/images/
+data/labels/
+
+# Training runs output
+runs/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# API keys
+.env
+roboflow.json
+
+# Roboflow downloads
+*.zip
