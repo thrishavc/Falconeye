@@ -52,7 +52,7 @@ else:
 _ = st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Duality_AI_logo.svg/320px-Duality_AI_logo.svg.png", width=150)
 st.sidebar.title("⚙️ Settings")
 
-confidence = 0.5 
+confidence = st.sidebar.slider("Confidence Threshold", 0.1, 0.9, 0.5, 0.05)
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 🎯 7 Target Classes")
@@ -84,13 +84,13 @@ if uploaded_file is not None:
     col1, col2 = st.columns(2)
     with col1:
         st.markdown("**📷 Original Image**")
-        st.image(image, use_column_width=True)
+        st.image(image, use_container_width=True)
 
     with col2:
         st.markdown("**🎯 Detected Objects**")
         annotated = results.plot()
         annotated_rgb = cv2.cvtColor(annotated, cv2.COLOR_BGR2RGB)
-        st.image(annotated_rgb, use_column_width=True)
+        st.image(annotated_rgb, use_container_width=True)
 
     st.markdown("---")
     st.subheader("📍 Detected Objects & Positions")
@@ -197,7 +197,7 @@ else:
 st.markdown("---")
 st.subheader("📉 Confusion Matrix")
 if os.path.exists("confusion_matrix.png"):
-    st.image("confusion_matrix.png", caption="Model Confusion Matrix", use_column_width=True)
+    st.image("confusion_matrix.png", caption="Model Confusion Matrix", use_container_width=True)
 else:
     st.info("Confusion matrix will appear here once evaluation is complete.")
 
