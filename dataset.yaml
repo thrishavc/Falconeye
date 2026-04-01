@@ -1,0 +1,14 @@
+path: ./dataset
+train: images/train
+val: images/val
+test: images/test
+
+nc: 7
+names:
+  0: oxygen_tank
+  1: nitrogen_tank
+  2: first_aid_box
+  3: fire_alarm
+  4: safety_switch_panel
+  5: emergency_phone
+  6: fire_extinguisher
