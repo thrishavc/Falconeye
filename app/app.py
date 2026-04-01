@@ -52,7 +52,7 @@ else:
 _ = st.sidebar.image("https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Duality_AI_logo.svg/320px-Duality_AI_logo.svg.png", width=150)
 st.sidebar.title("⚙️ Settings")
 
-confidence = 0.5  # Fixed default confidence threshold
+confidence = 0.5 
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("### 🎯 7 Target Classes")
@@ -109,7 +109,6 @@ if uploaded_file is not None:
             w = int(x2 - x1)
             h = int(y2 - y1)
 
-            # Quadrant label
             quad_x = "Left" if cx < img_w / 2 else "Right"
             quad_y = "Top" if cy < img_h / 2 else "Bottom"
             region = f"{quad_y}-{quad_x}"
@@ -145,7 +144,6 @@ if uploaded_file is not None:
         col1, col2, col3 = st.columns(3)
         col1.metric("Objects Detected", len(boxes))
 
-        # Build position summary for col2
         pos_lines = []
         for box in boxes:
             cls_id = int(box.cls[0])
