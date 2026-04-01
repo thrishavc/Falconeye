@@ -5,9 +5,10 @@ falconeye_env/
 *.pt
 *.pth
 
-# Dataset images (too large for GitHub)
-data/images/
-data/labels/
+# Dataset and generated outputs (too large for GitHub)
+data/
+models/
+predictions/
 
 # Training runs output
 runs/
