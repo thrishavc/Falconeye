@@ -1,0 +1,5 @@
+train: C:\Users\Thrisha V C\Desktop\FalconEye\data\train_3\train3
+val: C:\Users\Thrisha V C\Desktop\FalconEye\data\train_3\val3
+test: C:\Users\Thrisha V C\Desktop\FalconEye\data\test3
+nc: 7
+names: ['OxygenTank', 'NitrogenTank', 'FirstAidBox', 'FireAlarm', 'SafetySwitchPanel', 'EmergencyPhone', 'FireExtinguisher']
