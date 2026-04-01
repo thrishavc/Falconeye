@@ -6,7 +6,7 @@ import os
 import yaml
 
 
-def evaluate(model_path='runs/detect/train/weights/best.pt',
+def evaluate(model_path='models/best.pt',
              data_path='yolo_params.yaml'):
 
     # Load class names
