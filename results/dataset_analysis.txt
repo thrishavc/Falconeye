@@ -1,0 +1,18 @@
+============================================================
+FALCONEYE - TRAINING DATASET CLASS ANALYSIS
+============================================================
+
+Total training images analyzed: 1769
+Empty label files: 0
+
+Class                         Images  Annotations   % of Total
+------------------------------------------------------------
+OxygenTank                       817         1422        46.2%
+NitrogenTank                     851         1553        48.1%
+FirstAidBox                      530          705        30.0%
+FireAlarm                        281          323        15.9%
+SafetySwitchPanel                345          410        19.5%
+EmergencyPhone                   338          422        19.1%
+FireExtinguisher                 557          766        31.5%
+------------------------------------------------------------
+TOTAL                           1769         5601       100.0%
