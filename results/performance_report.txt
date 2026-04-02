@@ -1,0 +1,15 @@
+===== FALCONEYE PERFORMANCE REPORT =====
+
+mAP@0.5:      0.7209
+mAP@0.5:0.95: 0.6006
+Precision:    0.9160
+Recall:       0.6486
+
+PER-CLASS RESULTS:
+  OxygenTank                AP@0.5: 0.8406
+  NitrogenTank              AP@0.5: 0.7991
+  FirstAidBox               AP@0.5: 0.7612
+  FireAlarm                 AP@0.5: 0.6500
+  SafetySwitchPanel         AP@0.5: 0.7249
+  EmergencyPhone            AP@0.5: 0.6362
+  FireExtinguisher          AP@0.5: 0.6344

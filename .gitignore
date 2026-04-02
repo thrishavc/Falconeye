@@ -1,0 +1,30 @@
+# Large local artifacts - keep out of the repo (paths are never pushed)
+runs/
+dataset/
+models/
+falconeye_env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+
+# Cached labels / YOLO caches
+*.cache
+
+# Model weights (download separately or use models/ locally)
+*.pt
+*.onnx
+*.engine
+
+# Virtual environments (any name)
+.venv/
+venv/
+env/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

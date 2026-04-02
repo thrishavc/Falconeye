@@ -1,0 +1,7 @@
+path: ./dataset
+train: images/train
+val: images/val
+test: images/test
+
+nc: 7
+names: ['OxygenTank', 'NitrogenTank', 'FirstAidBox', 'FireAlarm', 'SafetySwitchPanel', 'EmergencyPhone', 'FireExtinguisher']
