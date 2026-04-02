@@ -1,0 +1,20 @@
+===== FALCONEYE OPTIMIZED MODEL REPORT =====
+
+mAP@0.5:      0.7335
+mAP@0.5:0.95: 0.6096
+Precision:    0.9310
+Recall:       0.6600
+
+BASELINE COMPARISON:
+Baseline mAP@0.5:  0.7209
+Optimized mAP@0.5: 0.7335
+Improvement:       +0.0126
+
+PER-CLASS RESULTS:
+  OxygenTank                AP@0.5: 0.8451
+  NitrogenTank              AP@0.5: 0.7940
+  FirstAidBox               AP@0.5: 0.7791
+  FireAlarm                 AP@0.5: 0.6746
+  SafetySwitchPanel         AP@0.5: 0.7364
+  EmergencyPhone            AP@0.5: 0.6512
+  FireExtinguisher          AP@0.5: 0.6542

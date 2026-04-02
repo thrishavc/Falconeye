@@ -5,7 +5,7 @@ import numpy as np
 import os
 import yaml
 
-def evaluate(model_path='runs/detect/optimized/weights/best.pt',
+def evaluate(model_path='models/optimized/best.pt',
              data_path='yolo_params.yaml'):
 
     with open(data_path) as f:
