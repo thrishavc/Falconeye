@@ -10,6 +10,21 @@ from ultralytics import YOLO
 import os
 import sys
 
+import ultralytics.data.build as ultralytics_data_build
+import ultralytics.models.yolo.detect.train as ultralytics_detect_train
+
+
+def _disable_dataloader_pin_memory():
+    """Work around Windows CUDA pin-memory mapping crashes."""
+    original_build_dataloader = ultralytics_data_build.build_dataloader
+
+    def build_dataloader_no_pin(*args, **kwargs):
+        kwargs["pin_memory"] = False
+        return original_build_dataloader(*args, **kwargs)
+
+    ultralytics_data_build.build_dataloader = build_dataloader_no_pin
+    ultralytics_detect_train.build_dataloader = build_dataloader_no_pin
+
 if __name__ == '__main__': 
     parser = argparse.ArgumentParser()
     # epochs
@@ -27,6 +42,7 @@ if __name__ == '__main__':
     # single_cls
     parser.add_argument('--single_cls', type=bool, default=SINGLE_CLS, help='Single class training')
     args = parser.parse_args()
+    _disable_dataloader_pin_memory()
     this_dir = os.path.dirname(__file__)
     os.chdir(this_dir)
     model = YOLO(os.path.join(this_dir, "yolov8m.pt"))
