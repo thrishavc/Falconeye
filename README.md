@@ -103,12 +103,13 @@ all 7 safety objects with bounding boxes and confidence scores.
 
 ## Results
 
-| Metric        | Score                  |
-|---------------|------------------------|
-| mAP@0.5       | TBD after training     |
-| Precision     | TBD                    |
-| Recall        | TBD                    |
-| Training Epochs | 50 baseline + 100 optimized |
+| Metric        | Baseline | Optimized |
+|---------------|----------|-----------|
+| mAP@0.5       | 0.7209   | 0.7335    |
+| mAP@0.5:0.95  | 0.6006   | 0.6096    |
+| Precision     | 0.9160   | 0.9310    |
+| Recall        | 0.6486   | 0.6600    |
+| Training Epochs | 50 baseline | +100 optimized |
 
 Results will be updated after the final training run.
 
