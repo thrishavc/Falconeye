@@ -337,7 +337,7 @@ if uploaded_file is not None:
     n     = len(boxes) if boxes is not None else 0
     avg_c = float(np.mean([float(b.conf[0]) for b in boxes])) if n > 0 else 0
     ucls  = len(set([int(b.cls[0]) for b in boxes])) if n > 0 else 0
-    msd   = real_map if real_map else (f"{avg_c:.2f}" if n > 0 else "N/A")
+    scan_conf = f"{avg_c:.3f}" if n > 0 else "N/A"
 
     if real_map:
         map_inline_ph.markdown(f"<br><div style='font-size:12px; color:#4ae176; padding-top:10px;'>- <strong>mAP@0.5:</strong> {real_map}</div>", unsafe_allow_html=True)
@@ -348,8 +348,10 @@ if uploaded_file is not None:
     map_ph.markdown(f"""
     <div class="fe-status-bar">
       <div><span class="fe-status-label">CURRENT MODEL</span><span class="fe-status-model">YOLOv8m</span></div>
-      <div style="text-align:right"><span class="fe-status-label">mAP@0.5</span>
-      <span class="fe-status-map">{msd}</span></div>
+      <div style="display:flex; gap:32px; text-align:right;">
+        <div><span class="fe-status-label">MODEL mAP@0.5</span><span style="color:#4ae176;font-size:24px;font-weight:700">0.731</span></div>
+        <div><span class="fe-status-label">SCAN CONFIDENCE</span><span style="color:#4cd7f6;font-size:24px;font-weight:700">{scan_conf}</span></div>
+      </div>
     </div>""", unsafe_allow_html=True)
 
     # Update metrics
@@ -444,7 +446,7 @@ if uploaded_file is not None:
                 bg = "rgba(76,215,246,0.04)" if i%2==0 else "transparent"
                 rows_html += f"""<tr style="background:{bg}">
                 <td style="color:#464554">{i:03d}</td>
-                <td style="color:#e0e8ff;text-transform:uppercase;font-weight:700">{lbl.replace(' ','_')}</td>
+                <td style="color:#e0e8ff;text-transform:uppercase;font-weight:700">{lbl}</td>
                 <td style="color:{bc}">{blocks} {pct}%</td>
                 <td style="color:#708090">{reg}</td></tr>"""
 
